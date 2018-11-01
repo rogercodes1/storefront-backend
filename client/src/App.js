@@ -7,16 +7,18 @@ import List from './pages/List';
 
 class App extends Component {
   render() {
+    const App = () => (
+     <div>
+       <Switch>
+         <Route exact path='/' component={Home}/>
+         <Route path='/list' component={List}/>
+       </Switch>
+     </div>
+   )
     return (
-      <div className="App">
-        <header className="App-header">
-
-        </header>
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/list' component={List}/>
-        </Switch>
-      </div>
+      <Switch>
+        <App/>
+      </Switch>
     );
   }
 }
